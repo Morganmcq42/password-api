@@ -15,7 +15,7 @@ def generate_password():
    return ''.join(password_list)
 @app.route('/generate-password', methods=['GET'])
 def get_password():
-   return jsonify({'password': generate_password()})
+   return jsonify({generate_password()})
 # ...existing code...
 @app.route('/', methods=['GET'])
 def home():
