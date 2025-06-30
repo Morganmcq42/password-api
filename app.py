@@ -21,5 +21,6 @@ def get_password():
 def home():
     return 'Password API is running.'
 # ...existing code...
-if __name__ == '__main__':
-   app.run(port=5000)
+import os 
+port = int(os.environ.get("PORT", 5000))
+app.run(host="0.0.0.0", port=port)
